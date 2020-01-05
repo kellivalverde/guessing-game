@@ -15,9 +15,11 @@ public class GuessingGame {
 		// loop
 		
 		int guessAttempts = 0;
+		int targetNum = 7;
+		
 		
 		do {
-			if(numGuess == 7){
+			if(numGuess == targetNum){
 				System.out.println("Yay! That's correct! You win!");
 				break;
 			}
@@ -28,11 +30,11 @@ public class GuessingGame {
 			else if(numGuess == -1) {
 				System.exit(numGuess);   // kills the program
 			}	
-			else if(numGuess < 7){
+			else if(numGuess < targetNum){
 				System.out.println("Try a higher number");
 				numGuess = input.nextInt();
 			}
-			else if(numGuess > 7){
+			else if(numGuess > targetNum){
 				System.out.println("Try a lower number");
 				numGuess = input.nextInt();
 			}
