@@ -6,21 +6,19 @@ public class GuessingGame {
 
 	public static void main(String[] args) {
 
-		Scanner input = new Scanner(System.in);  //input
+		System.out.println("Please guess a number between 1 and 10: \n (You have 4 guesses)");
 
-		System.out.println("Please guess a number between 1 and 10:");
+		Scanner input = new Scanner(System.in); // input
 
-		
 		int numGuess = input.nextInt(); // holds the info from the user
 		int guessAttempts = 0;
 		int secretNum = ThreadLocalRandom.current().nextInt(1, 11); // did 11 instead of 10 --> inclusive of 10
 
 		// would show me the targetNum so I know it's working:
 		// System.out.println(secretNum);
-		 
 
 		// loop
-		
+
 		do {
 			if (numGuess == secretNum) {
 				System.out.println("Yay! That's correct! You win!");
@@ -30,11 +28,12 @@ public class GuessingGame {
 				numGuess = input.nextInt();
 			} else if (numGuess == -1) {
 				System.exit(numGuess); // kills the program
+				System.out.println("Game over.");
 			} else if (numGuess < secretNum) {
-				System.out.println("Try a higher number");
+				System.out.println("Try a higher number.");
 				numGuess = input.nextInt();
 			} else if (numGuess > secretNum) {
-				System.out.println("Try a lower number");
+				System.out.println("Try a lower number.");
 				numGuess = input.nextInt();
 			}
 			guessAttempts += 1;
@@ -44,5 +43,5 @@ public class GuessingGame {
 		System.out.println("No more attempts. You are done.");
 
 		input.close();
-	}
-}
+	} // method
+} // class
