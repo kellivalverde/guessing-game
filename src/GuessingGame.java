@@ -14,7 +14,7 @@ public class GuessingGame {
 		int guessAttempts = 0;
 		int secretNum = ThreadLocalRandom.current().nextInt(1, 11); // did 11 instead of 10 --> inclusive of 10
 
-		// would show me the targetNum so I know it's working:
+		// would show me the secretNum so I know it's working:
 		// System.out.println(secretNum);
 
 		// loop
